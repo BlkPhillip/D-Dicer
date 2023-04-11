@@ -1,0 +1,103 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>🎲 D Dicer</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-one">
+        <h1>D Dicer</h1>
+      </div>
+      <div class="header-one-buttons">
+        <h3>Select Mode to play</h3>
+        <button class="btn normal_mode">Normal Mode</button>
+        <button class="btn combat_mode">Hard Mode</button>
+        <button class="btn game_settings">Rules</button>
+      </div>
+    </header>
+    <div class="mode_settings hidden">
+      <div class="header-header">
+        <h1>Rules</h1>
+        <button class="close_settings">&times;</button>
+      </div>
+      <div class="normal-mode-rules">
+        <h3>Normal Mode</h3>
+        <ul>
+          <li>Roll the dice to accumulate points.</li>
+          <li>Press the hold button to save them and swap turn.</li>
+          <li>If you role a 1 you lose your current score and your turn.</li>
+          <li>Reach 100 points before your opponent to win the game.</li>
+        </ul>
+      </div>
+      <div class="combat-mode-rules">
+        <h3>Hard Mode</h3>
+        <ul>
+          <li>In hard mode you play with two dices</li>
+          <li>Win the game by reaching 200 points before your opponent.</li>
+          <li>
+            If you role a 2, a 5 or a 8, with the total sum of your roled dices,
+            you lose your turn and your current score.
+          </li>
+          <li>
+            However if you role a sum of 7, you will be given the chance to
+            diminishe your opponent score with the total of your acumulated
+            current score.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="mode_damage hidden">
+      <div class="damage_buttons">
+        <p>Choose One</p>
+        <button class="btn btn-damage">🩸Bleed</button>
+        <button class="btn btn-hold-damage">🆙 Hold Score</button>
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+    <main>
+      <section class="player player--0 player--color">
+        <h2 class="player_name" id="player_name--0">Player 1</h2>
+        <p class="score" id="score--0">0</p>
+        <div class="current_score">
+          <p class="current_label">Current Score</p>
+          <p class="current_score_p" id="current_score--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="player_name" id="player_name--1">Player 2</h2>
+        <p class="score" id="score--1">0</p>
+        <div class="current_score">
+          <p class="current_label">Current Score</p>
+          <p class="current_score_p" id="current_score--1">0</p>
+        </div>
+      </section>
+      <div class="game_buttons">
+        <button class="btn btn_new">🔁 New game</button>
+        <div class="container_dice">
+          <div class="dice">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+          </div>
+          <div class="dice2">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+          </div>
+        </div>
+        <button class="btn btn_roll">🎲 Roll</button>
+        <button class="btn btn_hold">🆙 Hold Score</button>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
