@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +34,7 @@ header {
 }
 
 .header-one h1 {
-  font-size: 60px;
+  font-size: 5rem;
 }
 
 .header-one-buttons {
@@ -50,27 +52,29 @@ header {
 
 .normal-mode-rules h3 {
   font-size: 30px;
+  text-align: center;
 }
 
 .normal-mode-rules ul {
-  padding: 1.5rem;
+  padding: 1em;
 }
 
 .normal-mode-rules li {
-  font-size: 20px;
+  font-size: 1em;
   font-weight: bold;
 }
 
 .combat-mode-rules h3 {
   font-size: 30px;
+  text-align: center;
 }
 
 .combat-mode-rules ul {
-  padding: 1.5rem;
+  padding: 1em;
 }
 
 .combat-mode-rules li {
-  font-size: 20px;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -96,18 +100,19 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
   background-color: white;
-  padding: 6rem;
+  padding: 1rem;
   border-radius: 9px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
 }
 
+.header-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .close_settings {
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
   font-size: 2.5rem;
   color: #333;
   cursor: pointer;
@@ -116,20 +121,20 @@ main {
 }
 
 .mode_damage {
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   text-align: center;
   justify-content: center;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
+  padding: 2em;
+  height: 100%;
   background-color: hsla(200, 100%, 10%, 0.9);
   margin: 0 auto;
   border-radius: 9px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 5;
   color: hsl(200, 100%, 98%);
 }
 
@@ -138,17 +143,16 @@ main {
   flex-direction: column;
   align-self: center;
   align-items: center;
-  margin-top: 4rem;
 }
 
 .damage_buttons p {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
   font-size: 50px;
   font-weight: bold;
 }
 
 .damage_buttons .btn {
-  margin-top: 2rem;
+  margin-top: 1em;
 }
 
 .overlay {
@@ -168,8 +172,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  transition: all 0.75s;
   font-size: 30px;
 }
 
@@ -200,24 +202,71 @@ main {
 .game_buttons {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: absolute;
   align-self: center;
 }
 
 .game_buttons .btn {
-  margin: 1rem;
+  margin: 1em;
 }
 
 .btn_selected {
   box-shadow: inset 2px 2px 5px #616161, inset -1px -1px 0px hsl(0, 0%, 19%);
 }
 
+@media (max-width: 740px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  header button {
+    margin: 0.5em;
+  }
+  .mode_settings {
+    width: 80vw;
+    margin-top: 12em;
+  }
+  .mode_settings li {
+    font-size: 0.85em;
+  }
+  main {
+    flex-flow: column;
+    width: max-content;
+    height: max-content;
+    margin-bottom: 6em;
+  }
+  .player {
+    padding: 1.5em;
+  }
+  .game_buttons {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .game_buttons .btn {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    border-radius: 9px;
+    padding: 1em;
+    margin: 1em;
+  }
+  .mode_damage {
+    padding: 3em;
+    width: 95%;
+    height: 70%;
+  }
+}
+
 /* dice  */
 .container_dice {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   place-items: center;
-  border-radius: 30px;
-  height: 12rem;
+  height: 10em;
 }
 
 .dice {

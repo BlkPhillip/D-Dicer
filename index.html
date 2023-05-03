@@ -49,15 +49,19 @@
         </ul>
       </div>
     </div>
-    <div class="mode_damage hidden">
-      <div class="damage_buttons">
-        <p>Choose One</p>
-        <button class="btn btn-damage">🩸Bleed</button>
-        <button class="btn btn-hold-damage">🆙 Hold Score</button>
-      </div>
-    </div>
     <div class="overlay hidden"></div>
     <main>
+      <div class="mode_damage hidden">
+        <div class="damage_buttons">
+          <p>Choose One</p>
+          <button class="btn btn-damage">
+            <i class="bi bi-droplet"></i> Bleed
+          </button>
+          <button class="btn btn-hold-damage">
+            <i class="bi bi-save"></i> Hold Score
+          </button>
+        </div>
+      </div>
       <section class="player player--0 player--color">
         <h2 class="player_name" id="player_name--0">Player 1</h2>
         <p class="score" id="score--0">0</p>
@@ -75,7 +79,9 @@
         </div>
       </section>
       <div class="game_buttons">
-        <button class="btn btn_new">🔁 New game</button>
+        <button class="btn btn_new">
+          <i class="bi bi-plus-square"></i> New game
+        </button>
         <div class="container_dice">
           <div class="dice">
             <div class="face front"></div>
@@ -94,8 +100,10 @@
             <div class="face left"></div>
           </div>
         </div>
-        <button class="btn btn_roll">🎲 Roll</button>
-        <button class="btn btn_hold">🆙 Hold Score</button>
+        <button class="btn btn_roll"><i class="bi bi-dice-1"></i> Roll</button>
+        <button class="btn btn_hold">
+          <i class="bi bi-save"></i> Hold Score
+        </button>
       </div>
     </main>
     <script src="script.js"></script>
